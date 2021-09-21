@@ -1,0 +1,63 @@
+.UserInput {
+    width: 75%;
+    position: relative;
+    height: 60px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.UserInput input {
+    width: 100%;
+    height: 100%;
+    color: #373435;
+    padding-top: 10px;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    font-size: 13px;
+}
+
+.UserInput label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 2px solid #d5b39c;
+}
+
+.UserInput label::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    border-bottom: 3px solid #9b8672;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.UserInput span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    font-family: Handlee, serif;
+    color: #64554a;
+}
+
+.UserInput input:focus + label span,
+.UserInput input:valid + label span{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #373435;
+}
+
+.UserInput input:focus + label::after,
+.UserInput input:valid + label::after {
+    transform: translateX(0%);
+}

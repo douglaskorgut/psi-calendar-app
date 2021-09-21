@@ -1,0 +1,31 @@
+.Line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 20px;
+    margin-top: 10%;
+    opacity: 40%;
+}
+
+.HalfLine {
+    width: 75%;
+    height: 10%;
+    background-color: #d5b39c;
+    margin-top: 5px;
+}
+
+.Line p {
+    width: 20%;
+    margin-left: 10px;
+    font-family: Clicker Script, serif;
+    font-size: 25px;
+    color: #64554a;
+}
+
+@media (max-width: 1024px) {
+    .Line p {
+        margin-right: 10px;
+    }
+}
